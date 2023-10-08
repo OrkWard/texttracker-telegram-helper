@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "serve": "node ./dist/main.js",
-    "build": "tsc",
+    "serve": "node ./dist/out.cjs",
     "compile": "esbuild ./src/main.ts --bundle --outfile=./dist/out.cjs --platform=node"
   },
   "devDependencies": {
