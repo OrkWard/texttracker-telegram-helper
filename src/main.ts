@@ -71,8 +71,8 @@ bot.onText(/\/start/, (msg) => {
   lastId = msg.chat.id;
 
   if (!server.listening) {
-    server.listen(process.env.PORT, "0.0.0.0", () => {
-      console.log(`Server running at 0.0.0.0${process.env.PORT}`);
+    server.listen(process.env.PORT, () => {
+      console.log(`Server running at 0.0.0.0:${process.env.PORT}`);
     });
   }
 });
