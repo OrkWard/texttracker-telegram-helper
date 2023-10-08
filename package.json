@@ -1,0 +1,20 @@
+{
+  "name": "bot",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "serve": "node ./dist/main.js",
+    "build": "tsc",
+    "compile": "esbuild ./src/main.ts --bundle --outfile=./dist/out.cjs --platform=node"
+  },
+  "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.61.8",
+    "esbuild": "^0.19.3",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.63.0",
+    "openai": "^4.11.1"
+  }
+}
