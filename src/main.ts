@@ -71,8 +71,8 @@ bot.onText(/\/start/, (msg) => {
   lastId = msg.chat.id;
 
   if (!server.listening) {
-    server.listen(8999, "localhost", () => {
-      console.log("Server running at localhost:8999");
+    server.listen(443, "localhost", () => {
+      console.log("Server running at localhost:443");
     });
   }
 });
